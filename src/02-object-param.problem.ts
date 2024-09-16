@@ -1,8 +1,20 @@
 import { expect, it } from "vitest";
+import { ZodNumber } from "zod";
 
-export const addTwoNumbers = (params) => {
+type addTwoNumbersType = {
+  first: number,
+  second: number
+}
+
+
+// export const addTwoNumbers = (params: { first: number, second: number }) => {
+//   return params.first + params.second;
+// };
+
+export const addTwoNumbers = (params: addTwoNumbersType) => {
   return params.first + params.second;
 };
+
 
 it("Should add the two numbers together", () => {
   expect(
