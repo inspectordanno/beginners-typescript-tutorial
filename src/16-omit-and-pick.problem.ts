@@ -6,7 +6,7 @@ interface User {
   lastName: string;
 }
 
-type MyType = Omit<User, 'firstName' | 'lastName'>
+type MyType = Omit<User, 'id'>
 
 /**
  * How do we create a new object type with _only_ the
